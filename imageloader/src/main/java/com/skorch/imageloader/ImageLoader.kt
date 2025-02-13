@@ -13,6 +13,7 @@ import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 
 // for use with java -   ImageLoader.Companion.getInstance().load("url", view, R.drawable.placeholder);
+// for see logs please use "Image" as tag
 class ImageLoader private constructor(context: Context) {
     private val imageCache = ImageCache(context)
     private val imageDownloader = ImageDownloader()
