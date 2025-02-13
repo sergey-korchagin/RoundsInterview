@@ -19,7 +19,7 @@ private const val MAX_DURATION_HOURS = 4L
 
 internal class ImageCache(context: Context) {
     private val diskCacheDir: File = File(context.cacheDir, "image_cache")
-    private val memoryCache = object : LruCache<String, Bitmap>(MAX_SIZE) {}
+    private val memoryCache = object : LruCache<String, Bitmap>(MAX_SIZE) {} // ram cache while app is opened for not read from file , optimization
     private val cacheExpiration = mutableMapOf<String, Long>()
     private val cacheDuration = TimeUnit.HOURS.toMillis(MAX_DURATION_HOURS)
     private val sharedPreferences =
