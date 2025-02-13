@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Rounds Interview</string>
+    <string name="reset_button_text">Reset</string>
+</resources>
